@@ -1,29 +1,63 @@
-### ![Warning](https://img.shields.io/badge/Warning-Data%20has%20been%20moved-red) Our GitHub datasets are no longer updated since 19 August 2024
+# Linux Lab
 
-You can access the CSV version of our COVID-19 dataset via Our World in Data's data catalog: https://catalog.ourworldindata.org/garden/covid/latest/compact/compact.csv
+This repository documents my Linux, networking, and infrastructure learning lab.
 
-See our complete documentation for more information, other files, and metadata: https://docs.owid.io/projects/etl/api/covid/
+The goal of this lab is to build strong fundamentals in:
+- Linux administration
+- Networking
+- SSH
+- Virtualization
+- Infrastructure setup
+- Troubleshooting
 
 ---
 
-# COVID-19 Dataset by _Our World in Data_ 
-[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://ourworldindata.org/coronavirus)
-[![Data](https://img.shields.io/badge/go_to-data-purple)](public/data/)
-[![documentation](https://img.shields.io/badge/go_to-dev_docs-0055ff)](https://docs.owid.io/projects/covid)
-[![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+# 🖥️ Lab Environment
 
-### Project structure
-The project contains two independent directories:
+## Virtual Machines
 
-- [`public/data`](public/data): Contains the final datasets. This is for people interested in consuming the data and
-  understanding all the caveats about it and its metrics.
-- [`scripts`](scripts): Contains all the code and intermediate files to produce the final dataset. This is for people interested in
-  contributing to the project or better understanding our internal technical processes.
+| Machine | Purpose |
+|---|---|
+| Kali Linux | Security testing and Linux practice |
+| Ubuntu Server | Server administration and SSH practice |
 
-### Documentation
-If you are interested in the final dataset file, refer to [this document](public/data/README.md). If you want to
-learn more about our processes, refer to our [technical documentation](https://docs.owid.io/projects/covid).
+---
 
-### Contribute
-Thanks for considering contributing to this project! A good place to start is our [contribution
-guideline](https://docs.owid.io/projects/covid/en/latest/contribute.html).
+# ⚙️ Technologies Used
+
+- VirtualBox
+- Kali Linux
+- Ubuntu Server
+- OpenSSH
+- Linux Terminal
+- Internal VM Networking
+
+---
+
+# 🌐 Networking Setup
+
+## Network Configuration
+
+| Adapter | Mode |
+|---|---|
+| Adapter 1 | NAT |
+| Adapter 2 | Internal Network (`labnet`) |
+
+This setup allows:
+- Internet access through NAT
+- Communication between VMs through internal networking
+
+---
+
+# 🔐 SSH Configuration
+
+Configured:
+- OpenSSH Server on Ubuntu
+- SSH access from Kali to Ubuntu
+- SSH key authentication
+- Passwordless login
+
+Example command:
+
+```bash
+ssh username@ubuntu-ip
